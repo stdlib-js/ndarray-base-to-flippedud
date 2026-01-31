@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,25 +16,33 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Return a new ndarray where the order of elements along the second-to-last dimension of an input ndarray is reversed.
+* Returns a new ndarray where the order of elements along the second-to-last dimension of an input ndarray is reversed.
 *
-* @module @stdlib/ndarray-base-to-flippedud
+* @param x - input array
+* @returns output array
 *
 * @example
+* var typedarray = require( '@stdlib/array-typed' );
 * var ndarray = require( '@stdlib/ndarray-ctor' );
 * var ndarray2array = require( '@stdlib/ndarray-to-array' );
-* var toFlippedud = require( '@stdlib/ndarray-base-to-flippedud' );
 *
-* var buffer = [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ];
+* var buffer = typedarray( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ], 'float64' );
 * var shape = [ 3, 2 ];
 * var strides = [ 2, 1 ];
 * var offset = 0;
 *
-* var x = ndarray( 'generic', buffer, shape, strides, offset, 'row-major' );
+* var x = ndarray( 'float64', buffer, shape, strides, offset, 'row-major' );
 * // returns <ndarray>
+*
+* var sh = x.shape;
+* // returns [ 3, 2 ]
 *
 * var arr = ndarray2array( x );
 * // returns [ [ 1.0, 2.0 ], [ 3.0, 4.0 ], [ 5.0, 6.0 ] ]
@@ -42,15 +50,15 @@
 * var y = toFlippedud( x );
 * // returns <ndarray>
 *
+* sh = y.shape;
+* // returns [ 3, 2 ]
+*
 * arr = ndarray2array( y );
 * // returns [ [ 5.0, 6.0 ], [ 3.0, 4.0 ], [ 1.0, 2.0 ] ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function toFlippedud<T extends ndarray>( x: T ): T;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = toFlippedud;
