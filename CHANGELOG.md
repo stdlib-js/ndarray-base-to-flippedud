@@ -2,6 +2,40 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-04-08)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`1a45821`](https://github.com/stdlib-js/stdlib/commit/1a458218a5e319ee00c0d3ddb4e065ad64edef4c) - **docs:** update examples to use accessor functions _(by Athan Reines)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Athan Reines
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.1.1">
 
 ## 0.1.1 (2026-02-08)
